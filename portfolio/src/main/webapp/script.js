@@ -17,7 +17,7 @@
  */
 function addRandomGreeting() {
   const greetings =
-      ['Hello world!', '¡Hola Mundo!', '你好，世界！', 'Bonjour le monde!'];
+      [' “We’re not tools of the government or anyone else. Fighting was the only thing I was good at, but at least I always fought for what I believed in.”– Metal Gear Solid', '“It’s a-me, Mario!” – Assassin’s Creed II', '“FINISH HIM!” – Mortal Kombat', '“It’s dangerous to go alone, take this!” – The Legend of Zelda'];
 
   // Pick a random greeting.
   const greeting = greetings[Math.floor(Math.random() * greetings.length)];

@@ -7,3 +7,9 @@
 #greeting-container {
   margin-top: 20px;
 }
+
+p, h1, h2, body, nav {
+    text-align: center;
+}
+
+

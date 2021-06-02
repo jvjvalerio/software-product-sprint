@@ -12,4 +12,10 @@ p, h1, h2, body, nav {
     text-align: center;
 }
 
+html {
+    background-color: burlywood;
+}
 
+nav {
+    font-family: sans-serif;
+}

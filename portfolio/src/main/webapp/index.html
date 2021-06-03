@@ -1,41 +1,451 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Julio's Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-  </head>
-  <body>
-      <nav class="nav">
-          <span class ="menu">
-            <a href="index.html" class="menunav">Home</a>
-            <span class ="menu">
-            <a href="gallery.html" class="menunav">Gallery</a>
-          </span>
-        </nav>
-    <div id="content">
-      <h1>Welcome to Julio's Portfolio!</h1>
-        <img src="/images/Capture.PNG"/>      
-      <p>Hello there! My name is Julio Valerio! I'm a Computer Science major at Brooklyn College.
-         My goals this year are to build an impressive portfolio for future companies and to complete the
-         Software Product Sprint program while soaking up as much knowledge and experience as I can! I love 
-         electronic music (specifically house and techno), Jiu Jitsu, World of Warcraft, documentaries, and rabbit holes.
-         I'm the guy who'll talk your ear off about any technological innovations that could spark the imagination such as:
-         Elon Musks Neuralink, the concept of DAOs (Decentralized Autonomous Organizations) and they're implications on how
-         communities and enterprises are governed, Alpha Go winning chess matches, AI assisting our important decision 
-         making processes, the technological solutions to the "tragedy of the commons" for fair resource distribution, 
-         Ray Kurzweils take on the Singularity etc. etc.!
-      </p>
-      <h1>My Favorite Cuisine!</h1>
-      <p>I love Thai food! My favorite dish is Summer Rolls with peanut sauce. YUM!</p>
-      <img src="/images/summer rolls.jpg"/>
-      <!-- <p>Click <a href="/hello">here</a> to see content created by server code.</p> -->
-      <p>Click <a href="https://github.com/jvjvalerio">here</a> to be redirected to my Github profile!</p>
-      <p>Click <a href="https://www.linkedin.com/in/julio-valerio-779a3181/">here</a> to be redirected to my LinkedIn profile!</p>      
-      <p>Click the button below to generate a video game quote from some of my favorite video games!</p>
-      <button onclick="addRandomGreeting()">PRESS ME!</button>
-      <div id="greeting-container"></div>
-    </div>
-  </body>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--==================== UNICONS ====================-->
+        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+        
+        <!--==================== SWIPER CSS ====================-->
+        <link rel="stylesheet" href="css/swiper-bundle.min.css">
+        
+        <!--==================== CSS ====================-->
+        <link rel="stylesheet" href="css/styles.css">
+
+        <title>Julio's Portfolio</title>
+    </head>
+    <body>
+        <!--==================== HEADER ====================-->
+        <header class="header" id="header">
+            <nav class="nav container">
+                <a href="#" class="nav__logo">Julio</a>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list grid">
+                        <li class="nav__item">
+                            <a href="#home" class="nav__link">
+                                <i class="uil uil-estate nav__icon"></i> Home
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#about" class="nav__link">
+                                <i class="uil uil-user nav__icon"></i> About
+                                
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#qualifications" class="nav__link">
+                                <i class="uil uil-file-alt nav__icon"></i> Qualifications
+                                
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#contact" class="nav__link">
+                                <i class="uil uil-message nav__icon"></i> Contact Me
+                            </a>
+                        </li>
+                    </ul>
+                    <i class="uil uil-times nav__close" id="nav-close"></i>
+                </div>
+                <div class="nav__btns">
+                    <!-- Theme change button -->
+                    <i class="uil uil-moon change-theme" id="theme-button"></i>
+
+                    <div class="nav__toggle" id="nav-toggle">
+                        <i class="uil uil-apps"></i>
+                    </div>
+
+                </div>
+            </nav>
+        </header>
+
+        <!--==================== MAIN ====================-->
+        <main class="main">
+            <!--==================== HOME ====================-->
+            <section class="home section" id="home">
+                <div class="home__container container grid">
+                    <div class="home__content grid">
+                        <div class="home__social">
+                            <a href="https://www.linkedin.com/in/julio-valerio-779a3181/" target="_blank" class="home__social-icon">
+                                <i class="uil uil-linkedin-alt"></i>
+                            </a>
+                            <a href="https://github.com/jvjvalerio" target="_blank" class="home__social-icon">
+                                <i class="uil uil-github-alt"></i>
+                            </a>
+                        </div>
+
+                        <div class="home__img">
+                            <svg class="home__blob" viewbox="0 0 200 187" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <mask id="mask0" mask-type="alpha">
+                                    <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
+                                    130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
+                                    97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
+                                    0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"></path>
+                                </mask>
+                                <g mask="url(#mask0)">
+                                    <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
+                                    165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
+                                    129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
+                                    -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"></path>
+                                    <image class="home__blop-img" x="0" y="0" xlink:href="images/MyPhoto.PNG"></image>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="home__data">
+                            <h1 class="home__title">Hi, I'm Julio</h1>
+                            <h3 class="home_subtitle">Software Engineer</h3>
+                            <p class="home__description">
+                                Experienced with Java, production quality work.
+                            </p>
+                            <a href="#contact" class="button button--flex top">
+                                Contact Me  <i class="uil uil-message button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="home__scroll">
+                        <a href="#about" class="home__scroll-button button--flex">
+                            <i class="uil uil-mouse-alt home__scroll-mouse"></i>
+                            <span class="home__scroll-name">Scroll down</span>
+                            <i class="uil uil-arrow-down home__scroll-arrow"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== ABOUT ====================-->
+            <section class="about section " id="about">
+                <h2 class="section__title">About Me</h2>
+                <span class="section__subtitle"></span>
+
+                <div class="about__container container grid">
+                    <!--ABOUT IMAGE -->
+                        <img src="images/CoolGif.gif" alt="" class="about__img">
+                    
+                    <div class="about__data">
+                        <p class="about__description"> 
+                    <!--ABOUT TEXT -->
+                        Hello there! My name is Julio Valerio! I'm a Computer Science major at Brooklyn College. My goals this year are to build an impressive portfolio for future companies and to complete the Software Product Sprint program while soaking up as much knowledge and experience as I can! I love electronic music (specifically house and techno), Jiu Jitsu, World of Warcraft, documentaries, and rabbit holes. I'm the guy who'll talk your ear off about any technological innovations that could spark the imagination such as: Elon Musks Neuralink, the concept of DAOs (Decentralized Autonomous Organizations) and they're implications on how communities and enterprises are governed, Alpha Go winning chess matches, AI assisting our important decision making processes, the technological solutions to the "tragedy of the commons" for fair resource distribution, Ray Kurzweils take on the Singularity, and much more!
+                        </p> 
+                        <div class="about__info">
+                            <div>
+                                <span class="about__info-title">15+</span>
+                                <span class="about__info-name">Years <br> IT experience</span>
+                            </div>
+                            <div>
+                                <span class="about__info-title">04</span>
+                                <span class="about__info-name">Companies <br> worked</span>
+                            </div>
+                        </div>
+                        <div class="about__buttons">
+                            <a href="images/Resume-Julio-Valerio.pdf" class="button button--flex">
+                                Download CV <i class="uil uil-download-alt"></i>
+                            </a>                  
+                        </div>      
+                    </div>                                   
+                </div>
+            </section>
+            <!--==================== QUALIFICATION ====================-->
+            <section class="qualification section" id="qualifications">
+                <h2 class="section__title">Qualification</h2>
+                <span class="section__subtitle">My personal journey</span>
+
+                <div class="qualification__container container">
+                    <div class="qualification__tabs">
+                        <div class="qualification__button button--flex qualification__active" data-target="#education">
+                            <i class="uil uil-graduation-cap qualification__icon"></i>
+                            Learning Path
+                        </div>
+                        <div class="qualification__button button--flex" data-target="#work">
+                            <i class="uil uil-briefcase-alt qualification__icon"></i>
+                            Experience
+                        </div>
+                    </div>
+                    <div class="qualification__sections">
+                        <!-- 1 -->
+                        <div class="qualification__content qualification__active" data-content id="education">
+                            <!-- 1 -->
+                            <div class="qualification__data">
+                                <div></div>
+
+                                <div>
+                                    <span class="qualification__rounder"></span>
+                                    <span class="qualification__line"></span>
+                                </div>
+
+                                <div>
+                                    <h3 class="qualification__title">Bachelors Computer Science</h3>
+                                    <span class="qualification__subtitle">Brooklyn College</span>
+                                    <div class="qualification__calendar">
+                                        <i class="uil uil-calendar-alt"></i> 
+                                    2020 - 2022
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 2 -->
+                            <div class="qualification__data">
+                                <div>
+                                    <h3 class="qualification__title">Participant</h3>
+                                    <span class="qualification__subtitle">Google Software Product Sprint Program</span>
+                                    <div class="qualification__calendar">
+                                        <i class="uil uil-calendar-alt"></i>
+                                        May 2021 - August 2021
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <span class="qualification__rounder"></span>
+                                    <span class="qualification__line"></span>
+                                </div>
+                            </div>
+
+                            <!-- 3 -->
+                            <div class="qualification__data">
+                                <div></div>
+
+                                <div>
+                                    <span class="qualification__rounder"></span>
+                                    <span class="qualification__line"></span>
+                                </div>
+
+                                <div>
+                                    <h3 class="qualification__title">Mentee</h3>
+                                    <span class="qualification__subtitle">Google Mentorship and Development Program</span>
+                                    <div class="qualification__calendar">
+                                        <i class="uil uil-calendar-alt"></i> 
+                                    Nov 2020 - May 2021
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 4 -->
+                            <div class="qualification__data">
+                                <div>
+                                    <h3 class="qualification__title">Associates Computer Science</h3>
+                                    <span class="qualification__subtitle">LaGuardia Community College</span>
+                                    <div class="qualification__calendar">
+                                        <i class="uil uil-calendar-alt"></i> 
+                                    2018-2020    
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <span class="qualification__rounder"></span>
+                                    <span class="qualification__line"></span>
+                                </div>
+                            </div>
+
+                            <!-- 4 -->
+                            <div class="qualification__data">
+                                <div></div>
+
+                                <div>
+                                    <!--<span class="qualification__rounder"></span>
+                                    <!-- <span class="qualification__line"></span> -->
+                                </div>
+
+                                <div>
+                                    <h3 class="qualification__title"></h3>
+                                    <span class="qualification__subtitle"></span>
+                                    <div class="qualification__calendar">
+                                        <!--<i class="uil uil-calendar-alt"></i> --> 
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+
+                        <!-- 2 -->
+                        <div class="qualification__content" data-content id="work">
+                            <!-- 1 -->
+                            <div class="qualification__data">
+                                <div>
+                                    <h3 class="qualification__title">IT Associate Level 1</h3>
+                                    <span class="qualification__subtitle">College of Staten Island</span>
+                                    <div class="qualification__calendar">
+                                        <i class="uil uil-calendar-alt"></i>
+                                        October 2017 - Present
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <span class="qualification__rounder"></span>
+                                    <span class="qualification__line"></span>
+                                </div>
+                            </div>
+
+                            <!-- 2 -->
+                            <div class="qualification__data">
+                                <div></div>
+
+                                <div>
+                                    <span class="qualification__rounder"></span>
+                                    <span class="qualification__line"></span>
+                                </div>
+
+                                <div>
+                                    <h3 class="qualification__title">IT Support Assistant</h3>
+                                    <span class="qualification__subtitle">LaGuardia Community College</span>
+                                    <div class="qualification__calendar">
+                                        <i class = "uil uil-calendar-alt"></i>
+                                        October 2013 - September 2017
+                                        <!--<i class="uil uil-calendar-alt"></i> --> 
+                                        
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 3 -->
+                            <div class="qualification__data">
+                                <div>
+                                    <h3 class="qualification__title">Geek Squad</h3>
+                                    <span class="qualification__subtitle">Best Buy</span>
+                                    <div class="qualification__calendar">
+                                        <i class = "uil uil-calendar-alt"></i>
+                                        June 2009 - August 2012
+                                        <!--<i class="uil uil-calendar-alt"></i> --> 
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <span class="qualification__rounder"></span>
+                                    <span class="qualification__line"></span>
+                                </div>
+                            </div>
+                            <div class="qualification__data">
+                                <div></div>
+                                <div>
+                                    <span class="qualification__rounder"></span>
+                                    <span class="qualification__line"></span>
+                                </div>
+
+                                <div>
+                                    <h3 class="qualification__title">IT Support Specialist</h3>
+                                    <span class="qualification__subtitle">Gotham City Mortgage</span>
+                                    <div class="qualification__calendar">
+                                        <i class = "uil uil-calendar-alt"></i>
+                                        May 2004 - June 2009
+                                        <!--<i class="uil uil-calendar-alt"></i> --> 
+                                    </div>
+                                </div>
+                            </div> 
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== PROJECT IN MIND ====================-->
+            <section class="project section">
+                <div class="project__bg">
+                    <div class="project__container container grid">
+                        <div class="project__data">
+                            <h2 class="project__title">Do you have an idea?</h2>
+                            <p class="project__description">
+                                Contact me now and let's make your idea come true.
+                            </p>
+                            <a href="#contact" class="button button--flex button--white">
+                                Contact Me 
+                                <i class="uil uil-message button__icon .project__icon"></i>
+                            </a>
+                        </div>
+                        <img src="images/images-idea.png" alt="" class="project__img">
+                    </div>
+                </div>
+            </section>
+            <!--==================== CONTACT ME ====================-->
+            <section class="contact section" id="contact">
+                <div class="section__title">Contact Me</div>
+                <span class="section__subtitle">Get in touch</span>
+
+                <div class="contact__container container grid">
+                    <div>
+                        <div class="contact__information">
+                            <i class="uil uil-envelope contact__icon"></i>
+            
+                            <div>
+                                <h3 class="contact__title">Email</h3>
+                                <span class="contact__subtitle">jvjvalerio@me.com</span>
+                            </div>
+                        </div>
+                        <div class="contact__information">
+                            <i class="uil uil-map-marker contact__icon"></i>
+            
+                            <div>
+                                <h3 class="contact__title">Location</h3>
+                                <span class="contact__subtitle">Brooklyn - NY</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form action="" class=".contact__form grid">
+                        <div class="contact__inputs grid">
+                            <div class="contact__content">
+                                <label for="" class="contact__label">Name</label>
+                                <input type="text" class="contact__input">
+                            </div>
+                            <div class="contact__content">
+                                <label for="" class="contact__label">Email</label>
+                                <input type="email" class="contact__input">
+                            </div>
+                        </div>
+                        <div class="contact__content">
+                            <label for="" class="contact__label">Project</label>
+                            <input type="text" class="contact__input">
+                        </div>
+                        <div class="contact__content">
+                            <label for="" class="contact__label">Message</label>
+                            <textarea name="" id="" cols="0" rows="7" class="contact__input"></textarea>
+                            <input type="text" class="contact__input">
+                        </div>
+
+                        <div>
+                            <a href="#" class="button button--flex">
+                                Send Message
+                                <i class="uil uil-message button__icon"></i>
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <!--==================== FOOTER ====================-->
+        <footer class="footer">
+            <div class="footer__bg">
+                <div class="footer__container container grid">
+                    <div>
+                        <h1 class="footer__title">Julio</h1>
+                        <span class="footer__subtitle">Software Engineer</span>
+                    </div>
+
+                    <ul class="footer__links">
+                        <li>
+                            <a href="#about" class="footer__link">Resume</a>
+                        </li>
+                        <li>
+                            <a href="#contact" class="footer__link">Contact Me</a>
+                        </li>
+                    </ul>
+                    <p class="footer__copy">&copy; Bedimcode. All right reserved</p>
+                </div>
+            </div>
+        </footer>
+        <!--==================== SCROLL TOP ====================-->
+        <a href="#" class="scrollup" id="scroll-up">
+            <i class="uil uil-arrow-up scrollup__icon"></i>
+        </a>        
+
+        <!--===== SCROLL REVEAL =====-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!--==================== SWIPER JS ====================-->
+        <script src="js/.-3501-swiper-bundle.min.js"></script>
+
+        <!--==================== MAIN JS ====================-->
+        <script src="js/.-5864-script.js"></script>
+    </body>
 </html>

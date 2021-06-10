@@ -25,7 +25,7 @@ public class HelloWorldServlet extends HttpServlet {
 
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
     //Manually Create ArrayList String
-    String ArrayList[] = new String[] {"message1", "message2", "message3"};
+    String ArrayList[] = new String[] {"Thanks", "for", "coming!"};
 
     //Convert ArrayList to JSON
     String newJson = convertToJsonUsingGson(ArrayList);

@@ -1,4 +1,4 @@
-/** Fetches the current date from the server and adds it to the page. */
+/** fetches the hello response from the servlet and adds it to the html file via a container*/
 async function showHelloJulioServlet() {
   const responseFromServer = await fetch('/hello');
   const textFromResponse = await responseFromServer.text();

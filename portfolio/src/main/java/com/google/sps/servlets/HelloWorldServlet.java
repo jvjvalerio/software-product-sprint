@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 public class HelloWorldServlet extends HttpServlet {
 
   @Override
-  public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
     //Manually Create ArrayList String
     String ArrayList[] = new String[] {"Thanks", "for", "coming!"};
 

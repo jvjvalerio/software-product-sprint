@@ -14,7 +14,9 @@ function createTaskElement(task) {
   taskElement.className = 'task';
 
   const titleElement = document.createElement('span');
-  titleElement.innerText = task.title;
+  titleElement.innerText = task.name;
+
+
 
   const deleteButtonElement = document.createElement('button');
   deleteButtonElement.innerText = 'Delete';

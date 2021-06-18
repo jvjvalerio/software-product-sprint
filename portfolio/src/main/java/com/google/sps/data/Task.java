@@ -8,7 +8,7 @@ public final class Task {
   private final String message;
 
   public Task(String name, String email, String projectName, String message) {
-
+    
     this.name = name;
     this.email = email;
     this.projectName = projectName;

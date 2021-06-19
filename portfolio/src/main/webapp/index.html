@@ -16,7 +16,7 @@
 
         <title>Julio's Portfolio</title>
     </head>
-    <body>
+    <body onload="loadTasks()">
         <!--==================== HEADER ====================-->
         <header class="header" id="header">
             <nav class="nav container">
@@ -246,7 +246,7 @@
                                 <div></div>
 
                                 <div>
-                                    <!--<span class="qualification__rounder"></span>
+                                    <!--<span class="qualification__rounder"></span> -->
                                     <!-- <span class="qualification__line"></span> -->
                                 </div>
 
@@ -385,6 +385,7 @@
                             </div>
                         </div>
                     </div>
+                    <ul id="task-list"></ul>
 
                     <form action="/new-task" method="POST" class="contact__form grid">
                         <div class="contact__inputs grid">
@@ -406,7 +407,6 @@
                             <textarea name="" id="contactMessage" cols="0" rows="7" class="contact__input"></textarea>
                             <textarea name="message"></textarea>
                         </div>
-
                         <div>
                             <a href="#" class="button button--flex">
                                 <input type="submit"/>

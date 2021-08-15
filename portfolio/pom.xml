@@ -16,7 +16,7 @@
 
     <!-- Project-specific properties -->
     <exec.mainClass>com.google.sps.ServerMain</exec.mainClass>
-    <googleCloudProjectId>jvalerio-sps-summer21</googleCloudProjectId>
+    <googleCloudProjectId>absolute-feat-315720</googleCloudProjectId>
   </properties>
 
   <dependencies>
